@@ -31,21 +31,22 @@ class GildedTros {
     }
 
     private void updateQuality(Item item) {
-        if (!isWine(item)
-                && !isBackstagePass(item)) {
-            reduceQuality(item);
-        } else {
+        if (isWine(item)) {
+            increaseQuality(item);
+        } else if (isBackstagePass(item)) {
             increaseQuality(item);
 
-            if (isBackstagePass(item)) {
-                if (item.sellIn < 11) {
-                    increaseQuality(item);
-                }
-
-                if (item.sellIn < 6) {
-                    increaseQuality(item);
-                }
+            if (item.sellIn < 11) {
+                increaseQuality(item);
             }
+
+            if (item.sellIn < 6) {
+                increaseQuality(item);
+            }
+        } else if (isLegendaryItem(item)) {
+            return;
+        } else {
+            reduceQuality(item);
         }
     }
 
