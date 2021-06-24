@@ -17,21 +17,15 @@ class GildedTros {
                     }
                 }
             } else {
-                if (item.quality < 50) {
-                    item.quality = item.quality + 1;
+                increaseQuality(item);
 
-                    if (isBackstagePass(item)) {
-                        if (item.sellIn < 11) {
-                            if (item.quality < 50) {
-                                item.quality = item.quality + 1;
-                            }
-                        }
+                if (isBackstagePass(item)) {
+                    if (item.sellIn < 11) {
+                        increaseQuality(item);
+                    }
 
-                        if (item.sellIn < 6) {
-                            if (item.quality < 50) {
-                                item.quality = item.quality + 1;
-                            }
-                        }
+                    if (item.sellIn < 6) {
+                        increaseQuality(item);
                     }
                 }
             }
@@ -52,11 +46,15 @@ class GildedTros {
                         item.quality = item.quality - item.quality;
                     }
                 } else {
-                    if (item.quality < 50) {
-                        item.quality = item.quality + 1;
-                    }
+                    increaseQuality(item);
                 }
             }
+        }
+    }
+
+    private void increaseQuality(Item item) {
+        if (item.quality < 50) {
+            item.quality = item.quality + 1;
         }
     }
 
