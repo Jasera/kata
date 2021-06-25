@@ -1,6 +1,6 @@
 package com.gildedtros;
 
-import com.gildedtros.domainlogic.ItemSomething;
+import com.gildedtros.domainlogic.ItemHandler;
 import com.gildedtros.domainlogic.ItemSomethingFactory;
 
 class GildedTros {
@@ -13,13 +13,13 @@ class GildedTros {
     public void updateQuality() {
         for (Item item : items) {
 
-            ItemSomething itemSomething = ItemSomethingFactory.createItemSomething(item);
+            ItemHandler itemHandler = ItemSomethingFactory.createItemSomething(item);
 
-            itemSomething.updateQuality();
+            itemHandler.updateQuality();
 
-            itemSomething.updateSellin();
+            itemHandler.updateSellin();
 
-            itemSomething.handleNegativeSellin();
+            itemHandler.handleNegativeSellin();
         }
     }
 }

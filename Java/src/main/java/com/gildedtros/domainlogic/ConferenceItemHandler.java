@@ -2,8 +2,8 @@ package com.gildedtros.domainlogic;
 
 import com.gildedtros.Item;
 
-public class ConferenceItemSomething extends ItemSomething {
-    public ConferenceItemSomething(Item item) {
+public class ConferenceItemHandler extends ItemHandler {
+    public ConferenceItemHandler(Item item) {
         super(item);
     }
 

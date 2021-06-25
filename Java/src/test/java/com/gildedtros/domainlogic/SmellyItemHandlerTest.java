@@ -5,10 +5,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class SmellyItemSomethingTest {
+class SmellyItemHandlerTest {
     @Test
     void testUpdateQuality() {
-        SmellyItemSomething smellyItemSomething = new SmellyItemSomething(new Item("", 11, 10));
+        SmellyItemHandler smellyItemSomething = new SmellyItemHandler(new Item("", 11, 10));
 
         smellyItemSomething.updateQuality();
 
@@ -17,7 +17,7 @@ class SmellyItemSomethingTest {
 
     @Test
     void testNegativeSellin() {
-        SmellyItemSomething smellyItemSomething = new SmellyItemSomething(new Item("", 11, 10));
+        SmellyItemHandler smellyItemSomething = new SmellyItemHandler(new Item("", 11, 10));
 
         smellyItemSomething.negativeSellin();
 

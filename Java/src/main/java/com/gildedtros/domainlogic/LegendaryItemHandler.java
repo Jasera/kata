@@ -2,20 +2,22 @@ package com.gildedtros.domainlogic;
 
 import com.gildedtros.Item;
 
-public class SmellyItemSomething extends ItemSomething {
-    public SmellyItemSomething(Item item) {
+public class LegendaryItemHandler extends ItemHandler {
+    public LegendaryItemHandler(Item item) {
         super(item);
     }
 
     @Override
     public void updateQuality() {
-        reduceQuality();
-        reduceQuality();
+        return;
+    }
+
+    public void updateSellin() {
+        return;
     }
 
     @Override
     protected void negativeSellin() {
-        reduceQuality();
-        reduceQuality();
+        return;
     }
 }

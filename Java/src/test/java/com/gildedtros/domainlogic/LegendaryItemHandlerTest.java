@@ -5,11 +5,11 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class LegendaryItemSomethingTest {
+class LegendaryItemHandlerTest {
 
     @Test
     void testUpdateQuality() {
-        LegendaryItemSomething legendaryItemSomething = new LegendaryItemSomething(new Item("", 11, 10));
+        LegendaryItemHandler legendaryItemSomething = new LegendaryItemHandler(new Item("", 11, 10));
 
         legendaryItemSomething.updateQuality();
 
@@ -18,7 +18,7 @@ class LegendaryItemSomethingTest {
 
     @Test
     void testUpdateSellin() {
-        LegendaryItemSomething legendaryItemSomething = new LegendaryItemSomething(new Item("", 5, 10));
+        LegendaryItemHandler legendaryItemSomething = new LegendaryItemHandler(new Item("", 5, 10));
 
         legendaryItemSomething.updateSellin();
 
@@ -27,7 +27,7 @@ class LegendaryItemSomethingTest {
 
     @Test
     void testNegativeSellin() {
-        LegendaryItemSomething legendaryItemSomething = new LegendaryItemSomething(new Item("", 5, 10));
+        LegendaryItemHandler legendaryItemSomething = new LegendaryItemHandler(new Item("", 5, 10));
 
         legendaryItemSomething.negativeSellin();
 

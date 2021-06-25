@@ -2,8 +2,8 @@ package com.gildedtros.domainlogic;
 
 import com.gildedtros.Item;
 
-public class DefaultItemSomething extends ItemSomething {
-    protected DefaultItemSomething(Item item) {
+public class DefaultItemHandler extends ItemHandler {
+    protected DefaultItemHandler(Item item) {
         super(item);
     }
 

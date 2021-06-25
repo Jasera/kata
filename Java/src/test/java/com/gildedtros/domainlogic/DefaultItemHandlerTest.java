@@ -5,11 +5,11 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class DefaultItemSomethingTest {
+class DefaultItemHandlerTest {
 
     @Test
     void testUpdateQuality() {
-        DefaultItemSomething defaultItemSomething = new DefaultItemSomething(new Item("", 11, 10));
+        DefaultItemHandler defaultItemSomething = new DefaultItemHandler(new Item("", 11, 10));
 
         defaultItemSomething.updateQuality();
 
@@ -18,7 +18,7 @@ class DefaultItemSomethingTest {
 
     @Test
     void testNegativeSellin() {
-        DefaultItemSomething defaultItemSomething = new DefaultItemSomething(new Item("", 11, 10));
+        DefaultItemHandler defaultItemSomething = new DefaultItemHandler(new Item("", 11, 10));
 
         defaultItemSomething.negativeSellin();
 

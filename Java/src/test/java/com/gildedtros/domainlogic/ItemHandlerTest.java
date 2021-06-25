@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class ItemSomethingTest {
+class ItemHandlerTest {
 
     @Test
     void testItemSomethingZero() {
@@ -81,7 +81,7 @@ class ItemSomethingTest {
         assertEquals(testClass.getItem().sellIn, 500);
     }
 
-    class TestClass extends ItemSomething {
+    class TestClass extends ItemHandler {
 
         protected TestClass(Item item) {
             super(item);

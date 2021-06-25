@@ -5,11 +5,11 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class WineItemSomethingTest {
+class WineItemHandlerTest {
 
     @Test
     void testUpdateQuality() {
-        WineItemSomething wineItemSomething = new WineItemSomething(new Item("", 11, 10));
+        WineItemHandler wineItemSomething = new WineItemHandler(new Item("", 11, 10));
 
         wineItemSomething.updateQuality();
 
@@ -18,7 +18,7 @@ class WineItemSomethingTest {
 
     @Test
     void testNegativeSellin() {
-        WineItemSomething wineItemSomething = new WineItemSomething(new Item("", 0, 10));
+        WineItemHandler wineItemSomething = new WineItemHandler(new Item("", 0, 10));
 
         wineItemSomething.negativeSellin();
 

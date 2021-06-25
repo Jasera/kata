@@ -1,10 +1,9 @@
 package com.gildedtros.domainlogic;
 
 import com.gildedtros.Item;
-import com.gildedtros.domainlogic.ItemSomething;
 
-public class WineItemSomething extends ItemSomething {
-    public WineItemSomething(Item item) {
+public class WineItemHandler extends ItemHandler {
+    public WineItemHandler(Item item) {
         super(item);
     }
 

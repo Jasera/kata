@@ -2,10 +2,10 @@ package com.gildedtros.domainlogic;
 
 import com.gildedtros.Item;
 
-public abstract class ItemSomething {
+public abstract class ItemHandler {
     private Item item;
 
-    protected ItemSomething(Item item) {
+    protected ItemHandler(Item item) {
         this.item = item;
     }
 

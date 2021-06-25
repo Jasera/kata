@@ -5,10 +5,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class ConferenceItemSomethingTest {
+class ConferenceItemHandlerTest {
     @Test
     void testUpdateQualityAbove11() {
-        ConferenceItemSomething conferenceItemSomething = new ConferenceItemSomething(new Item("", 11, 10));
+        ConferenceItemHandler conferenceItemSomething = new ConferenceItemHandler(new Item("", 11, 10));
 
         conferenceItemSomething.updateQuality();
 
@@ -17,7 +17,7 @@ class ConferenceItemSomethingTest {
 
     @Test
     void testUpdateQualitybetween6And11() {
-        ConferenceItemSomething conferenceItemSomething = new ConferenceItemSomething(new Item("", 8, 10));
+        ConferenceItemHandler conferenceItemSomething = new ConferenceItemHandler(new Item("", 8, 10));
 
         conferenceItemSomething.updateQuality();
 
@@ -26,7 +26,7 @@ class ConferenceItemSomethingTest {
 
     @Test
     void testUpdateQualitybelow5() {
-        ConferenceItemSomething conferenceItemSomething = new ConferenceItemSomething(new Item("", 3, 10));
+        ConferenceItemHandler conferenceItemSomething = new ConferenceItemHandler(new Item("", 3, 10));
 
         conferenceItemSomething.updateQuality();
 
@@ -35,7 +35,7 @@ class ConferenceItemSomethingTest {
 
     @Test
     void testNegativeSellin() {
-        ConferenceItemSomething conferenceItemSomething = new ConferenceItemSomething(new Item("", 3, 10));
+        ConferenceItemHandler conferenceItemSomething = new ConferenceItemHandler(new Item("", 3, 10));
 
         conferenceItemSomething.negativeSellin();
 
