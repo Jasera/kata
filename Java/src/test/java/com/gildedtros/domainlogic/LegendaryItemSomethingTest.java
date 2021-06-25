@@ -15,4 +15,13 @@ class LegendaryItemSomethingTest {
 
         assertEquals(legendaryItemSomething.getItem().quality, 10);
     }
+
+    @Test
+    void testUpdateSellin() {
+        LegendaryItemSomething legendaryItemSomething = new LegendaryItemSomething(new Item("", 5, 10));
+
+        legendaryItemSomething.updateSellin();
+
+        assertEquals(legendaryItemSomething.getItem().sellIn, 5);
+    }
 }

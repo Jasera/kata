@@ -17,9 +17,7 @@ class GildedTros {
 
             itemSomething.updateQuality();
 
-            if (!isLegendaryItem(item)) {
-                item.sellIn = item.sellIn - 1;
-            }
+            itemSomething.updateSellin();
 
             if (item.sellIn < 0) {
                 if (!isWine(item)) {

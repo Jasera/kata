@@ -12,4 +12,9 @@ public class LegendaryItemSomething extends ItemSomething {
     public void updateQuality() {
         return;
     }
+
+    @Override
+    public void updateSellin() {
+        return;
+    }
 }

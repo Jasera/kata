@@ -31,4 +31,8 @@ public abstract class ItemSomething {
     public Item getItem() {
         return item;
     }
+
+    public void updateSellin() {
+        this.item.sellIn = this.item.sellIn - 1;
+    }
 }

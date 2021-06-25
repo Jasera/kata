@@ -52,6 +52,15 @@ class ItemSomethingTest {
         assertEquals(testClass.getItem().quality, 0);
     }
 
+    @Test
+    void testItemSellinUpdate() {
+        TestClass testClass = new TestClass(new Item("test", 10, 0));
+
+        testClass.updateSellin();
+
+        assertEquals(testClass.getItem().sellIn, 9);
+    }
+
     class TestClass extends ItemSomething {
 
         protected TestClass(Item item) {
