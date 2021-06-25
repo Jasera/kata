@@ -8,46 +8,53 @@ class ItemSomethingTest {
 
     @Test
     void testItemSomethingZero() {
-        ItemSomething itemSomething = new ItemSomething(new Item("test", 0, 10));
+        TestClass testClass = new TestClass(new Item("test", 0, 10));
 
-        itemSomething.qualityZero();
+        testClass.qualityZero();
 
-        assertEquals(itemSomething.getItem().quality, 0);
+        assertEquals(testClass.getItem().quality, 0);
     }
 
     @Test
     void testItemSomethingIncrease() {
-        ItemSomething itemSomething = new ItemSomething(new Item("test", 0, 10));
+        TestClass testClass = new TestClass(new Item("test", 0, 10));
 
-        itemSomething.increaseQuality();
+        testClass.increaseQuality();
 
-        assertEquals(itemSomething.getItem().quality, 11);
+        assertEquals(testClass.getItem().quality, 11);
     }
 
     @Test
     void testItemSomethingIncreaseAbove50() {
-        ItemSomething itemSomething = new ItemSomething(new Item("test", 0, 50));
+        TestClass testClass = new TestClass(new Item("test", 0, 50));
 
-        itemSomething.increaseQuality();
+        testClass.increaseQuality();
 
-        assertEquals(itemSomething.getItem().quality, 50);
+        assertEquals(testClass.getItem().quality, 50);
     }
 
     @Test
     void testItemSomethingReduce() {
-        ItemSomething itemSomething = new ItemSomething(new Item("test",0, 10));
+        TestClass testClass = new TestClass(new Item("test", 0, 10));
 
-        itemSomething.reduceQuality();
+        testClass.reduceQuality();
 
-        assertEquals(itemSomething.getItem().quality, 9);
+        assertEquals(testClass.getItem().quality, 9);
     }
 
     @Test
     void testItemSomethingReduceBelow0() {
-        ItemSomething itemSomething = new ItemSomething(new Item("test", 0, 0));
+        TestClass testClass = new TestClass(new Item("test", 0, 0));
 
-        itemSomething.reduceQuality();
+        testClass.reduceQuality();
 
-        assertEquals(itemSomething.getItem().quality, 0);
+        assertEquals(testClass.getItem().quality, 0);
+    }
+    
+    class TestClass extends ItemSomething {
+
+        protected TestClass(Item item) {
+            super(item);
+        }
     }
 }

@@ -1,9 +1,9 @@
 package com.gildedtros;
 
-public class ItemSomething {
+public abstract class ItemSomething {
     private Item item;
 
-    public ItemSomething(Item item) {
+    protected ItemSomething(Item item) {
         this.item = item;
     }
 
