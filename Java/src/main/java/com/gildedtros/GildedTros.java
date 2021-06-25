@@ -19,16 +19,19 @@ class GildedTros {
 
             itemSomething.updateSellin();
 
-            if (item.sellIn < 0) {
-                if (!isWine(item)) {
-                    if (!isBackstagePass(item)) {
-                        reduceQuality(item);
-                    } else {
-                        qualityZero(item);
-                    }
-                } else {
-                    increaseQuality(item);
-                }
+            handleNegativeSellin(item);
+        }
+    }
+
+    private void handleNegativeSellin(Item item) {
+        if (item.sellIn < 0) {
+            if (isWine(item)) {
+                increaseQuality(item);
+            }
+            else if (isBackstagePass(item)) {
+                qualityZero(item);
+            } else {
+                reduceQuality(item);
             }
         }
     }
