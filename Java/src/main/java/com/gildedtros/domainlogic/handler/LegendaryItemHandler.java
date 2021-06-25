@@ -5,6 +5,7 @@ import com.gildedtros.Item;
 public class LegendaryItemHandler extends ItemHandler {
     public LegendaryItemHandler(Item item) {
         super(item);
+        item.quality = 80;
     }
 
     @Override

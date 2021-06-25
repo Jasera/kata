@@ -1,4 +1,4 @@
-package com.gildedtros.domainlogic;
+package com.gildedtros.domainlogic.handler;
 
 import com.gildedtros.Item;
 import com.gildedtros.domainlogic.handler.LegendaryItemHandler;
@@ -14,7 +14,7 @@ class LegendaryItemHandlerTest {
 
         legendaryItemSomething.updateQuality();
 
-        assertEquals(legendaryItemSomething.getItem().quality, 10);
+        assertEquals(legendaryItemSomething.getItem().quality, 80);
     }
 
     @Test
@@ -33,6 +33,6 @@ class LegendaryItemHandlerTest {
         legendaryItemSomething.negativeSellin();
 
         assertEquals(legendaryItemSomething.getItem().sellIn, 5);
-        assertEquals(legendaryItemSomething.getItem().quality, 10);
+        assertEquals(legendaryItemSomething.getItem().quality, 80);
     }
 }
