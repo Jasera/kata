@@ -19,4 +19,9 @@ public class ConferenceItemSomething extends ItemSomething {
             increaseQuality();
         }
     }
+
+    @Override
+    protected void negativeSellin() {
+
+    }
 }

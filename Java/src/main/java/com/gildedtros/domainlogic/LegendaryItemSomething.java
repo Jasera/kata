@@ -13,8 +13,12 @@ public class LegendaryItemSomething extends ItemSomething {
         return;
     }
 
-    @Override
     public void updateSellin() {
         return;
+    }
+
+    @Override
+    protected void negativeSellin() {
+
     }
 }

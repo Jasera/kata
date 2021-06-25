@@ -13,4 +13,9 @@ public class WineItemSomething extends ItemSomething {
         increaseQuality();
     }
 
+    @Override
+    protected void negativeSellin() {
+
+    }
+
 }

@@ -9,7 +9,23 @@ public abstract class ItemSomething {
         this.item = item;
     }
 
+    public void updateSellin() {
+        this.item.sellIn = this.item.sellIn - 1;
+    }
+
+    public void handleNegativeSellin() {
+        if (this.item.sellIn < 0) {
+            negativeSellin();
+        }
+    }
+
+    public Item getItem() {
+        return item;
+    }
+
     public abstract void updateQuality();
+
+    protected abstract void negativeSellin();
 
     protected void qualityZero() {
         this.item.quality = 0;
@@ -21,18 +37,10 @@ public abstract class ItemSomething {
         }
     }
 
-
     protected void increaseQuality() {
         if (this.item.quality < 50) {
             this.item.quality = this.item.quality + 1;
         }
     }
 
-    public Item getItem() {
-        return item;
-    }
-
-    public void updateSellin() {
-        this.item.sellIn = this.item.sellIn - 1;
-    }
 }

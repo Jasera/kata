@@ -61,6 +61,26 @@ class ItemSomethingTest {
         assertEquals(testClass.getItem().sellIn, 9);
     }
 
+    @Test
+    void testHandleNegativeSellinWith0OrAboveSellin() {
+        TestClass testClass = new TestClass(new Item("test", 0, 0));
+
+        testClass.handleNegativeSellin();
+
+        assertEquals(testClass.getItem().quality, 0);
+        assertEquals(testClass.getItem().sellIn, 0);
+    }
+
+    @Test
+    void testHandleNegativeSellinWithNegativeSellin() {
+        TestClass testClass = new TestClass(new Item("test", -1, 0));
+
+        testClass.handleNegativeSellin();
+
+        assertEquals(testClass.getItem().quality, 404);
+        assertEquals(testClass.getItem().sellIn, 500);
+    }
+
     class TestClass extends ItemSomething {
 
         protected TestClass(Item item) {
@@ -70,6 +90,12 @@ class ItemSomethingTest {
         @Override
         public void updateQuality() {
             throw new IllegalArgumentException("Not being tested here");
+        }
+
+        @Override
+        protected void negativeSellin() {
+            getItem().quality = 404;
+            getItem().sellIn = 500;
         }
     }
 }
