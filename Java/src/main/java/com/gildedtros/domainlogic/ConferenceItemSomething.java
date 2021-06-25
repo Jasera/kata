@@ -22,6 +22,6 @@ public class ConferenceItemSomething extends ItemSomething {
 
     @Override
     protected void negativeSellin() {
-
+        this.qualityZero();
     }
 }

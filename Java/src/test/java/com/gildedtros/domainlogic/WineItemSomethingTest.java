@@ -15,4 +15,14 @@ class WineItemSomethingTest {
 
         assertEquals(wineItemSomething.getItem().quality, 11);
     }
+
+    @Test
+    void testNegativeSellin() {
+        WineItemSomething wineItemSomething = new WineItemSomething(new Item("", 0, 10));
+
+        wineItemSomething.negativeSellin();
+
+        assertEquals(wineItemSomething.getItem().quality, 11);
+        assertEquals(wineItemSomething.getItem().sellIn, 0);
+    }
 }

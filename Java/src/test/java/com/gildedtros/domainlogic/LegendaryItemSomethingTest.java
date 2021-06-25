@@ -24,4 +24,14 @@ class LegendaryItemSomethingTest {
 
         assertEquals(legendaryItemSomething.getItem().sellIn, 5);
     }
+
+    @Test
+    void testNegativeSellin() {
+        LegendaryItemSomething legendaryItemSomething = new LegendaryItemSomething(new Item("", 5, 10));
+
+        legendaryItemSomething.negativeSellin();
+
+        assertEquals(legendaryItemSomething.getItem().sellIn, 5);
+        assertEquals(legendaryItemSomething.getItem().quality, 10);
+    }
 }

@@ -14,6 +14,6 @@ public class DefaultItemSomething extends ItemSomething {
 
     @Override
     protected void negativeSellin() {
-
+        reduceQuality();
     }
 }

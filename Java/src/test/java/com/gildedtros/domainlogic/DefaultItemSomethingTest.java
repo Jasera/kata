@@ -15,4 +15,14 @@ class DefaultItemSomethingTest {
 
         assertEquals(defaultItemSomething.getItem().quality, 9);
     }
+
+    @Test
+    void testNegativeSellin() {
+        DefaultItemSomething defaultItemSomething = new DefaultItemSomething(new Item("", 11, 10));
+
+        defaultItemSomething.negativeSellin();
+
+        assertEquals(defaultItemSomething.getItem().quality, 9);
+        assertEquals(defaultItemSomething.getItem().sellIn, 11);
+    }
 }

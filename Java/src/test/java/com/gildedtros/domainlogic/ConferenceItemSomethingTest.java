@@ -32,4 +32,14 @@ class ConferenceItemSomethingTest {
 
         assertEquals(conferenceItemSomething.getItem().quality, 13);
     }
+
+    @Test
+    void testNegativeSellin() {
+        ConferenceItemSomething conferenceItemSomething = new ConferenceItemSomething(new Item("", 3, 10));
+
+        conferenceItemSomething.negativeSellin();
+
+        assertEquals(conferenceItemSomething.getItem().quality, 0);
+        assertEquals(conferenceItemSomething.getItem().sellIn, 3);
+    }
 }

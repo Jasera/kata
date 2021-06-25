@@ -19,6 +19,6 @@ public class LegendaryItemSomething extends ItemSomething {
 
     @Override
     protected void negativeSellin() {
-
+        return;
     }
 }
