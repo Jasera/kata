@@ -1,4 +1,4 @@
-package com.gildedtros.domainlogic;
+package com.gildedtros.domainlogic.handler;
 
 import com.gildedtros.Item;
 

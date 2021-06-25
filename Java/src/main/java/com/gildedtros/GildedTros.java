@@ -1,6 +1,6 @@
 package com.gildedtros;
 
-import com.gildedtros.domainlogic.ItemHandler;
+import com.gildedtros.domainlogic.handler.ItemHandler;
 import com.gildedtros.domainlogic.ItemSomethingFactory;
 
 class GildedTros {

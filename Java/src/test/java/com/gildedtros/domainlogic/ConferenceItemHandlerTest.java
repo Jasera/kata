@@ -1,6 +1,7 @@
 package com.gildedtros.domainlogic;
 
 import com.gildedtros.Item;
+import com.gildedtros.domainlogic.handler.ConferenceItemHandler;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

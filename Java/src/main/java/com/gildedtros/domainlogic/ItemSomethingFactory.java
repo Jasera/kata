@@ -1,6 +1,7 @@
 package com.gildedtros.domainlogic;
 
 import com.gildedtros.Item;
+import com.gildedtros.domainlogic.handler.*;
 
 public class ItemSomethingFactory {
 

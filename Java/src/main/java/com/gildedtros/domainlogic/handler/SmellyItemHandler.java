@@ -1,19 +1,21 @@
-package com.gildedtros.domainlogic;
+package com.gildedtros.domainlogic.handler;
 
 import com.gildedtros.Item;
 
-public class DefaultItemHandler extends ItemHandler {
-    protected DefaultItemHandler(Item item) {
+public class SmellyItemHandler extends ItemHandler {
+    public SmellyItemHandler(Item item) {
         super(item);
     }
 
     @Override
     public void updateQuality() {
         reduceQuality();
+        reduceQuality();
     }
 
     @Override
     protected void negativeSellin() {
+        reduceQuality();
         reduceQuality();
     }
 }
