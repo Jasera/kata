@@ -42,4 +42,25 @@ class ItemSomethingFactoryTest {
 
         assertTrue(itemSomething instanceof DefaultItemSomething);
     }
+
+    @Test
+    void testSmellyItemLongMethods() {
+        ItemSomething itemSomething = ItemSomethingFactory.createItemSomething(new Item("Long Methods", 1, 0));
+
+        assertTrue(itemSomething instanceof SmellyItemSomething);
+    }
+
+    @Test
+    void testSmellyItemDuplicateCode() {
+        ItemSomething itemSomething = ItemSomethingFactory.createItemSomething(new Item("Duplicate Code", 1, 0));
+
+        assertTrue(itemSomething instanceof SmellyItemSomething);
+    }
+
+    @Test
+    void testSmellyItemUglyVariableNames() {
+        ItemSomething itemSomething = ItemSomethingFactory.createItemSomething(new Item("Ugly Variable Names", 1, 0));
+
+        assertTrue(itemSomething instanceof SmellyItemSomething);
+    }
 }

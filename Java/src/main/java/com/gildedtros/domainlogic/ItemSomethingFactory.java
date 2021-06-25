@@ -13,6 +13,10 @@ public class ItemSomethingFactory {
                 return new LegendaryItemSomething(item);
             case "Good Wine":
                 return new WineItemSomething(item);
+            case "Duplicate Code":
+            case "Long Methods":
+            case "Ugly Variable Names":
+                return new SmellyItemSomething(item);
             default:
                 return new DefaultItemSomething(item);
         }
