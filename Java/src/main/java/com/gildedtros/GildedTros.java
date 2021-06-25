@@ -1,5 +1,8 @@
 package com.gildedtros;
 
+import com.gildedtros.domainlogic.ItemSomething;
+import com.gildedtros.domainlogic.ItemSomethingFactory;
+
 class GildedTros {
     Item[] items;
 
@@ -10,7 +13,9 @@ class GildedTros {
     public void updateQuality() {
         for (Item item : items) {
 
-            updateQuality(item);
+            ItemSomething itemSomething = ItemSomethingFactory.createItemSomething(item);
+
+            itemSomething.updateQuality();
 
             if (!isLegendaryItem(item)) {
                 item.sellIn = item.sellIn - 1;
@@ -27,26 +32,6 @@ class GildedTros {
                     increaseQuality(item);
                 }
             }
-        }
-    }
-
-    private void updateQuality(Item item) {
-        if (isWine(item)) {
-            increaseQuality(item);
-        } else if (isBackstagePass(item)) {
-            increaseQuality(item);
-
-            if (item.sellIn < 11) {
-                increaseQuality(item);
-            }
-
-            if (item.sellIn < 6) {
-                increaseQuality(item);
-            }
-        } else if (isLegendaryItem(item)) {
-            return;
-        } else {
-            reduceQuality(item);
         }
     }
 

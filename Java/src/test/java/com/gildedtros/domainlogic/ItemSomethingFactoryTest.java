@@ -1,5 +1,7 @@
-package com.gildedtros;
+package com.gildedtros.domainlogic;
 
+import com.gildedtros.Item;
+import com.gildedtros.domainlogic.*;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

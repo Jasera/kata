@@ -1,4 +1,6 @@
-package com.gildedtros;
+package com.gildedtros.domainlogic;
+
+import com.gildedtros.Item;
 
 public abstract class ItemSomething {
     private Item item;
@@ -7,18 +9,20 @@ public abstract class ItemSomething {
         this.item = item;
     }
 
-    public void qualityZero() {
+    public abstract void updateQuality();
+
+    protected void qualityZero() {
         this.item.quality = 0;
     }
 
-    public void reduceQuality() {
+    protected void reduceQuality() {
         if (this.item.quality > 0) {
             this.item.quality = this.item.quality - 1;
         }
     }
 
 
-    public void increaseQuality() {
+    protected void increaseQuality() {
         if (this.item.quality < 50) {
             this.item.quality = this.item.quality + 1;
         }

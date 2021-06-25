@@ -1,4 +1,6 @@
-package com.gildedtros;
+package com.gildedtros.domainlogic;
+
+import com.gildedtros.Item;
 
 public class ItemSomethingFactory {
 

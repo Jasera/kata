@@ -1,8 +1,9 @@
-package com.gildedtros;
+package com.gildedtros.domainlogic;
 
+import com.gildedtros.Item;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class ItemSomethingTest {
 
@@ -50,11 +51,16 @@ class ItemSomethingTest {
 
         assertEquals(testClass.getItem().quality, 0);
     }
-    
+
     class TestClass extends ItemSomething {
 
         protected TestClass(Item item) {
             super(item);
+        }
+
+        @Override
+        public void updateQuality() {
+            throw new IllegalArgumentException("Not being tested here");
         }
     }
 }
